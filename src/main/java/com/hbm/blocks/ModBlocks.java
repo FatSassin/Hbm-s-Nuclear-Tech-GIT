@@ -206,6 +206,8 @@ public class ModBlocks {
 	public static Block block_aluminium;
 	public static Block block_fluorite;
 	public static Block block_steel;
+	public static Block steel_super;
+	public static Block steel_super_broken;
 	public static Block block_tcalloy;
 	public static Block block_cdalloy;
 	public static Block block_lead;
@@ -1495,6 +1497,8 @@ public class ModBlocks {
 		block_aluminium = new BlockBeaconable(Material.iron).setBlockName("block_aluminium").setCreativeTab(MainRegistry.blockTab).setStepSound(Block.soundTypeMetal).setHardness(5.0F).setResistance(20.0F).setBlockTextureName(RefStrings.MODID + ":block_aluminium");
 		block_fluorite = new BlockBeaconable(Material.iron).setBlockName("block_fluorite").setCreativeTab(MainRegistry.blockTab).setHardness(5.0F).setResistance(10.0F).setBlockTextureName(RefStrings.MODID + ":block_fluorite");
 		block_steel = new BlockBeaconable(Material.iron).setBlockName("block_steel").setCreativeTab(MainRegistry.blockTab).setStepSound(Block.soundTypeMetal).setHardness(5.0F).setResistance(50.0F).setBlockTextureName(RefStrings.MODID + ":block_steel");
+		steel_super = new BlockUberSteel().setBlockName("steel_super").setCreativeTab(MainRegistry.blockTab).setHardness(50.0F).setResistance(300.0F);
+		steel_super_broken = new BlockFalling(Material.iron).setBlockName("steel_super_broken").setCreativeTab(MainRegistry.blockTab).setHardness(5.0F).setResistance(10.0F).setBlockTextureName(RefStrings.MODID + ":steel_super_broken");
 		block_tcalloy = new BlockBeaconable(Material.iron).setBlockName("block_tcalloy").setCreativeTab(MainRegistry.blockTab).setStepSound(Block.soundTypeMetal).setHardness(5.0F).setResistance(70.0F).setBlockTextureName(RefStrings.MODID + ":block_tcalloy");
 		block_cdalloy = new BlockBeaconable(Material.iron).setBlockName("block_cdalloy").setCreativeTab(MainRegistry.blockTab).setStepSound(Block.soundTypeMetal).setHardness(5.0F).setResistance(70.0F).setBlockTextureName(RefStrings.MODID + ":block_cdalloy");
 		block_lead = new BlockBeaconable(Material.iron).setBlockName("block_lead").setCreativeTab(MainRegistry.blockTab).setStepSound(Block.soundTypeMetal).setHardness(5.0F).setResistance(50.0F).setBlockTextureName(RefStrings.MODID + ":block_lead");
@@ -2896,6 +2900,8 @@ public class ModBlocks {
 		GameRegistry.registerBlock(concrete_asbestos, ItemBlockBlastInfo.class, concrete_asbestos.getUnlocalizedName());
 		GameRegistry.registerBlock(concrete_super, ItemBlockBlastInfo.class, concrete_super.getUnlocalizedName());
 		GameRegistry.registerBlock(concrete_super_broken, ItemBlockBlastInfo.class, concrete_super_broken.getUnlocalizedName());
+		GameRegistry.registerBlock(steel_super, ItemBlockBlastInfo.class, steel_super.getUnlocalizedName());
+		GameRegistry.registerBlock(steel_super_broken, ItemBlockBlastInfo.class, steel_super_broken.getUnlocalizedName());
 		GameRegistry.registerBlock(ducrete_smooth, ItemBlockBlastInfo.class, ducrete_smooth.getUnlocalizedName());
 		GameRegistry.registerBlock(ducrete, ItemBlockBlastInfo.class, ducrete.getUnlocalizedName());
 		GameRegistry.registerBlock(concrete_pillar, ItemBlockBlastInfo.class, concrete_pillar.getUnlocalizedName());
