@@ -10,6 +10,7 @@ import java.util.Map;
 import com.hbm.dim.trait.CBT_Atmosphere;
 import com.hbm.dim.trait.CelestialBodyTrait;
 import com.hbm.dim.trait.CBT_Atmosphere.FluidEntry;
+import com.hbm.dim.trait.CBT_Winter;
 import com.hbm.inventory.fluid.FluidType;
 import com.hbm.render.shader.Shader;
 import com.hbm.util.AstronomyUtil;

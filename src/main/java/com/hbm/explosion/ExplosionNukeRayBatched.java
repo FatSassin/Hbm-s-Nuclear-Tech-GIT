@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import com.hbm.util.fauxpointtwelve.BlockPos;
+import com.hbm.dim.trait.CBT_Winter;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -260,5 +261,9 @@ public class ExplosionNukeRayBatched {
 			yCoord = y;
 			zCoord = z;
 		}
+	}
+
+	public float SetWinash(float winash) {
+		return winash;
 	}
 }

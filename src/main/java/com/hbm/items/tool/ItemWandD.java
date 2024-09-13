@@ -7,6 +7,7 @@ import com.hbm.dim.DebugTeleporter;
 import com.hbm.dim.SolarSystem;
 import com.hbm.dim.trait.CBT_Atmosphere;
 import com.hbm.dim.trait.CBT_Atmosphere.FluidEntry;
+import com.hbm.dim.trait.CBT_Winter;
 import com.hbm.dim.trait.CelestialBodyTrait.CBT_Destroyed;
 import com.hbm.lib.Library;
 
@@ -60,46 +61,10 @@ public class ItemWandD extends Item {
 			}
 		} else {
 			if(!player.isSneaking()) {
-				// TESTING: View atmospheric data
-				CBT_Atmosphere atmosphere = CelestialBody.getTrait(world, CBT_Atmosphere.class);
-	
-				boolean isVacuum = true;
-				if(atmosphere != null) {
-					for(FluidEntry entry : atmosphere.fluids) {
-						// if(entry.pressure > 0.001) {
-							player.addChatMessage(new ChatComponentText("Atmosphere: " + entry.fluid.getUnlocalizedName() + " - " + entry.pressure + "bar"));
-							isVacuum = false;
-						// }
-					}
+					// TESTING: View winter data
+					CBT_Winter winter = CelestialBody.getTrait(world, CBT_Winter.class);
+				player.addChatMessage(new ChatComponentText("Winter level: " + winter));
 				}
-	
-				if(isVacuum)
-					player.addChatMessage(new ChatComponentText("Atmosphere: NEAR VACUUM"));
-			} else {
-				CelestialBody star = CelestialBody.getStar(world);
-
-				if(!star.hasTrait(CBT_Destroyed.class)) {
-
-					// TESTING: END OF TIME
-					star.modifyTraits(new CBT_Destroyed());
-		
-					// TESTING: END OF LIFE
-					CelestialBody.degas(world);
-		
-					// GOD
-					// DAMN
-					player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "GOD"));
-					player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "DAMN"));
-					player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "THE"));
-					player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "" + EnumChatFormatting.OBFUSCATED + "SUN"));
-				} else {
-
-					star.clearTraits();
-					CelestialBody.clearTraits(world);
-					
-					player.addChatMessage(new ChatComponentText("kidding"));
-				}
-			}
 		}
 
 		return stack;
