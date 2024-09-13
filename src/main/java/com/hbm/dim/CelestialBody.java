@@ -295,6 +295,9 @@ public class CelestialBody {
 			currentTraits.put(CBT_Atmosphere.class, atmosphere);
 		}
 
+		CBT_Winter winter = (CBT_Winter) currentTraits.get(CBT_Winter.class);
+		currentTraits.put(CBT_Winter.class, winter);
+
 		boolean hasFluid = false;
 		for(FluidEntry entry : atmosphere.fluids) {
 			if(entry.fluid == fluid) {

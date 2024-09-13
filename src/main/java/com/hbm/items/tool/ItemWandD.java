@@ -63,8 +63,8 @@ public class ItemWandD extends Item {
 			if(!player.isSneaking()) {
 					// TESTING: View winter data
 					CBT_Winter winter = CelestialBody.getTrait(world, CBT_Winter.class);
-				player.addChatMessage(new ChatComponentText("Winter level: " + winter));
-				}
+					player.addChatMessage(new ChatComponentText("Winter level: " + winter));
+					}
 		}
 
 		return stack;
