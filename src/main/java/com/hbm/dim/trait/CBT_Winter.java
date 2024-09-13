@@ -5,24 +5,24 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public class CBT_Winter extends CelestialBodyTrait{
 
-    public float winash;
+    public float winter;
 
     public CBT_Winter()  {
-        this.winash = 20;
+        this.winter = 20;
     }
 
-    public CBT_Winter(float winash) { this.winash = winash; }
+    public CBT_Winter(float winter) { this.winter = winter; }
 
     @Override
-    public void writeToNBT(NBTTagCompound nbt) { nbt.setFloat("win", winash); }
+    public void writeToNBT(NBTTagCompound nbt) { nbt.setFloat("winter", winter); }
 
     @Override
-    public void readFromNBT(NBTTagCompound nbt) { winash = nbt.getFloat("win"); }
+    public void readFromNBT(NBTTagCompound nbt) { winter = nbt.getFloat("winter"); }
 
     @Override
-    public void writeToBytes(ByteBuf buf) { buf.writeFloat(winash); }
+    public void writeToBytes(ByteBuf buf) { buf.writeFloat(winter); }
 
     @Override
-    public void readFromBytes(ByteBuf buf) { winash = buf.readFloat(); }
+    public void readFromBytes(ByteBuf buf) { winter = buf.readFloat(); }
 
 }
