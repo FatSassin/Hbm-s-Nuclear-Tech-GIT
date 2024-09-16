@@ -1467,6 +1467,8 @@ public class ModItems {
 	public static Item missile_volcano;
 	public static Item missile_doomsday;
 	public static Item missile_doomsday_rusted;
+	public static Item missile_slbm;
+	public static Item missile_slbm_rusted;
 	public static Item missile_taint;
 	public static Item missile_micro;
 	public static Item missile_bhole;

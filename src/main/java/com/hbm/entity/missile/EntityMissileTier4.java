@@ -124,4 +124,27 @@ public abstract class EntityMissileTier4 extends EntityMissileBaseNT {
 		}
 		@Override public ItemStack getMissileItemForInfo() { return new ItemStack(ModItems.missile_doomsday_rusted); }
 	}
+
+	public static class EntityMissileSLBM extends EntityMissileTier4 {
+		public EntityMissileSLBM(World world) { super(world); }
+		public EntityMissileSLBM(World world, float x, float y, float z, int a, int b) { super(world, x, y, z, a, b); }
+		@Override public void onImpact() {
+			this.worldObj.spawnEntityInWorld(EntityNukeExplosionMK5.statFac(worldObj, BombConfig.missileRadius, posX, posY, posZ));
+			EntityNukeTorex.statFac(worldObj, posX, posY, posZ, BombConfig.missileRadius);
+		}
+		@Override public List<ItemStack> getDebris() { return null; }
+		@Override public ItemStack getDebrisRareDrop() { return null; }
+		@Override public String getUnlocalizedName() { return "radar.target.slbm"; }
+		@Override public ItemStack getMissileItemForInfo() { return new ItemStack(ModItems.missile_slbm); }
+	}
+
+	public static class EntityMissileSLBMRusted extends EntityMissileSLBM {
+		public EntityMissileSLBMRusted(World world) { super(world); }
+		public EntityMissileSLBMRusted(World world, float x, float y, float z, int a, int b) { super(world, x, y, z, a, b); }
+		@Override public void onImpact() {
+			this.worldObj.spawnEntityInWorld(EntityNukeExplosionMK5.statFac(worldObj, BombConfig.missileRadius, posX, posY, posZ));
+			EntityNukeTorex.statFac(worldObj, posX, posY, posZ, BombConfig.missileRadius);
+		}
+		@Override public ItemStack getMissileItemForInfo() { return new ItemStack(ModItems.missile_slbm_rusted); }
+	}
 }

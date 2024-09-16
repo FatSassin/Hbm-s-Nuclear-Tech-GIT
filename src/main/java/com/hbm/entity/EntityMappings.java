@@ -104,6 +104,8 @@ public class EntityMappings {
 		addEntity(EntitySparkBeam.class, "entity_spark_beam", 1000);
 		addEntity(EntityMissileDoomsday.class, "entity_missile_doomsday", 1000);
 		addEntity(EntityMissileDoomsdayRusted.class, "entity_missile_doomsday_rusted", 1000);
+		addEntity(EntityMissileDoomsday.class, "entity_missile_slbm", 1000);
+		addEntity(EntityMissileDoomsday.class, "entity_missile_slbm_rusted", 1000);
 		addEntity(EntityNukeExplosionMK3.class, "entity_nuke_mk3", 1000);
 		addEntity(EntityVortex.class, "entity_vortex", 250);
 		addEntity(EntityMeteor.class, "entity_meteor", 250);
