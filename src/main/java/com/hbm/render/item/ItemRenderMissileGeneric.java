@@ -32,7 +32,8 @@ public class ItemRenderMissileGeneric implements IItemRenderer {
 		TYPE_ABM,
 		TYPE_NUCLEAR,
 		TYPE_CARRIER,
-		TYPE_ROBIN
+		TYPE_ROBIN,
+		TYPE_SLBM
 	}
 	
 	public ItemRenderMissileGeneric(RenderMissileType type) {
@@ -77,6 +78,7 @@ public class ItemRenderMissileGeneric implements IItemRenderer {
 		case TYPE_NUCLEAR: guiScale = 1.375D; guiOffset = 1.5D; break;
 		case TYPE_CARRIER: guiScale = 0.625D; guiOffset = -17D; break;
 		case TYPE_ROBIN: guiScale = 1.25D; guiOffset = 2D; break;
+		case TYPE_SLBM: guiScale = 1.375D; guiOffset = 1.5D; break;
 		}
 
 		GL11.glEnable(GL11.GL_LIGHTING);
